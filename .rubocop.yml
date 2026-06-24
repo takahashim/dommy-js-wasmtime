@@ -1,0 +1,40 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.2
+  SuggestExtensions: false
+
+# House style (mirrors the kotoyomi/dommy family this gem grew out of).
+Style/StringLiterals:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/NumericPredicate:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+
+# This gem is a faithful, low-level port of the mruby-wasm-js `js.*` handle ABI
+# (25 import functions) + WASI shim. Several metric/naming cops fight that shape
+# (a single big dispatch method, ABI-mandated short param names, an intentional
+# `eval` public method mirroring vm.eval). Correctness is covered by the host
+# spec/smoke suites, not by these cops.
+Metrics/AbcSize:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+Metrics/ParameterLists:
+  Enabled: false
+Security/Eval:
+  Enabled: false
+Naming/MethodParameterName:
+  Enabled: false
+Naming/PredicateMethod:
+  Enabled: false
+Lint/DuplicateBranch:
+  Enabled: false
